@@ -9,10 +9,10 @@
 */
 
 /* Imports */
-@import url("reset.css");
+/* @import url("reset.css"); */
 /* @import url("pygment.css");
 @import url("typogrify.css"); */
-@import url("fonts.css");
+/* @import url("fonts.css"); */
 
 :root {
     --site-max-width: 800px;
@@ -187,6 +187,8 @@ div#mobile-menu.mobile-menu-active {
 
 div#mobile-menu ul li {
     background: var(--color-index-2);
+    border: 2px solid var(--color-index-4);
+
     /* border: 2px solid var(--color-index); */
     text-align: center;
     margin-bottom: 30px;
@@ -212,11 +214,13 @@ div#mobile-menu ul li a {
 
 .mobile-nav--close {
     top: 20px;
-    position: absolute;
+    position: fixed;
     right: 15px;
     height: 32px;
     width: 32px;
-    border: 2px solid #8ca0ff;
+    display: block;
+    background: url("../images/jps2022003_icons.png") 32px 0;
+    cursor: pointer;
 }
 
 .mobile-nav--open {
@@ -226,22 +230,22 @@ div#mobile-menu ul li a {
     height: 32px;
     width: 32px;
     display: block;
+    background: url("../images/jps2022003_icons.png") 0 0;
     /* background: var(--color-index-2); */
     /* padding: 4px; */
+    cursor:pointer;
 }
 
-.mobile-nav--open span, 
+/* .mobile-nav--open span, 
 .mobile-nav--open span:before,
 .mobile-nav--open span:after {
   cursor: pointer;
-  /* border-radius: 1px; */
   height: 5px;
   width: 32px;
   background: var(--color-index-4);
   position: absolute;
   display: block;
   content: '';
-  /* left: 2px; */
   top: 5px;
 }
 .mobile-nav--open span:before {
@@ -249,7 +253,7 @@ div#mobile-menu ul li a {
 }
 .mobile-nav--open span:after {
   top: 20px; 
-}
+} */
 
 
 /* above 50 rem, we ditch the mobile menu  */
