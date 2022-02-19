@@ -301,6 +301,14 @@ div#mobile-menu {
     align-items: center;
     justify-content: center;
     display: grid;
+    grid-template-rows: 1fr 1fr 2fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "."
+    "mobilelogo"
+    "mobilenav"
+    "mobilesocial"
+    ".";
     z-index: 30;
     height: 100vh;
     background: var(--color-index-1);
@@ -313,8 +321,7 @@ div#mobile-menu {
     height: 100vh;
     opacity: 0;
     font-size: 2rem;
-    pointer-events: none;
-
+    pointer-events: none;  
 }
 
 div#mobile-menu.mobile-menu-active {
@@ -322,24 +329,40 @@ div#mobile-menu.mobile-menu-active {
     pointer-events: all;
 }
 
+nav#mobile-nav {
+    margin: 0 auto;
+    grid-area: mobilenav;
+}
+
+div#mobile-social {
+    margin: 0 auto;
+    grid-area: mobilesocial;
+}
+
 div#mobile-menu ul {
 	list-style: none;
+    margin: 0;
 }
 
 div#mobile-menu ul li {
+
 	list-style: none;
     background: var(--color-index-2);
     border: 2px solid var(--color-index-4);
 
     /* border: 2px solid var(--color-index); */
     text-align: center;
-    margin-bottom: 30px;
+    margin: 0 0 30px 0;
     width: 10rem;
     height: 3rem;
     line-height: 3rem;
     font-family: "Kenney Pixel";
     font-size: 2rem;
     text-transform: uppercase;
+}
+
+div#mobile-menu ul li:last-of-type {
+    margin: 0;
 }
 
 div#mobile-menu ul li:hover {
@@ -378,6 +401,21 @@ div#mobile-menu ul li a {
     cursor:pointer;
 }
 
+img#mobilemenulogo {
+    grid-area: mobilelogo;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    margin: 0 auto;
+    /* width: 128px; */
+    -moz-transform: scale(4);
+    -ms-transform: scale(4);
+    -o-transform: scale(4);
+    -webkit-transform: scale(4);
+    transform: scale(4);
+    padding-bottom: 20px;
+}
+
 /* .mobile-nav--open span, 
 .mobile-nav--open span:before,
 .mobile-nav--open span:after {
@@ -397,6 +435,13 @@ div#mobile-menu ul li a {
   top: 20px; 
 } */
 
+
+.social-icon {
+    border: 2px solid #20283d;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
 
 /* above 50 rem, we ditch the mobile menu  */
 @media all and (min-width: 50rem) {
