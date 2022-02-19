@@ -29,7 +29,7 @@ body {
     /* background: var(--color-index-1); */
     color: var(--color-index-4);
     /* font-size: 87.5%; Base font size: 14px; */
-    font-family: 'Share Tech Mono', 'Courier Prime', 'Courier New', sans-serif;
+    font-family: 'TT Norms', sans-serif;
     line-height: 1.5em;
     margin: 0;
     padding: 0;
@@ -188,7 +188,7 @@ div.container {
 
 header#banner {
     grid-area: header;
-    background-color: #8ca0ff;
+    background-color: var(--color-index-2);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -218,12 +218,51 @@ section#sitelogo {
     grid-area: headerlogo;
     background-color: #115f6d;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 nav#menu {
     grid-area: headernav;
-    background-color: #ffa08c;
+    /* background-color: #ffa08c; */
     /* text-align: center; */
+    
+}
+
+nav#menu ul {
+	list-style: none;
+    margin: 0;
+}
+
+nav#menu ul li {
+
+	list-style: none;
+    /* background: var(--color-index-2); */
+    /* border: 2px solid var(--color-index-4); */
+
+    /* border: 2px solid var(--color-index); */
+    text-align: center;
+    /* margin: 0 0 30px 0; */
+    /* width: 10rem; */
+    /* height: 3rem; */
+    /* line-height: 3rem; */
+    font-family: "Kenney Pixel";
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+nav#menu ul li a {
+    text-decoration: none;
+}
+
+nav#menu ul li a:hover {
+    color: var(--color-index-2);
+    background: var(--color-index-3);
+}
+
+nav#menu ul li.active a, nav#menu ul li.active a:visited {
+    color: var(--color-index-2);
+    background: var(--color-index-3);
 }
 
 main#content {
@@ -436,7 +475,36 @@ img#mobilemenulogo {
 } */
 
 
-.social-icon {
+#header-social {
+    text-align: right;
+}
+
+#header-social .social-icon {
+    /* border: 2px solid #20283d; */
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#header-social .social-icon img {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    /* margin: 0 auto; */
+    /* width: 128px; */
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    /* padding-bottom: 20px; */
+    position:relative;
+    /* top: 20px; */
+}
+
+#mobile-social .social-icon {
     /* border: 2px solid #20283d; */
     width: 64px;
     height: 64px;
@@ -445,7 +513,7 @@ img#mobilemenulogo {
     vertical-align: middle;
 }
 
-.social-icon img {
+#mobile-social .social-icon img {
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
@@ -493,8 +561,12 @@ img#mobilemenulogo {
     }
 
     div#headercontent {
-        grid-template-columns: 1fr calc(var(--site-max-width)/3) calc(var(--site-max-width)/3) calc(var(--site-max-width)/3) 1fr;
-        grid-template-areas: ". headerlogo headernav headersocial .";
+        grid-template-columns: 1fr calc(var(--site-max-width)/5) calc(var(--site-max-width)/5*3) calc(var(--site-max-width)/5) 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        ". headerlogo . . ."
+        ". headerlogo . . ."
+        ". headerlogo headernav headersocial .";
     }
 
     div#header-social {
@@ -506,7 +578,11 @@ img#mobilemenulogo {
 /* really big screens get more width in the nav area */
 @media all and (min-width: 64rem) {
     div#headercontent {
-        grid-template-columns: 1fr calc(var(--site-max-width)/2) calc(var(--site-max-width)/2) 1fr;
-        grid-template-areas: "headerlogo headernav headersocial .";
+        grid-template-columns: 1fr calc(var(--site-max-width)/4*3) calc(var(--site-max-width)/4*1) 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "headerlogo . . ."
+            "headerlogo . . ."
+            "headerlogo headernav headersocial .";
     }
 }
