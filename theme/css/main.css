@@ -437,10 +437,28 @@ img#mobilemenulogo {
 
 
 .social-icon {
-    border: 2px solid #20283d;
-    width: 32px;
-    height: 32px;
+    /* border: 2px solid #20283d; */
+    width: 64px;
+    height: 64px;
     display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.social-icon img {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    /* margin: 0 auto; */
+    /* width: 128px; */
+    -moz-transform: scale(4);
+    -ms-transform: scale(4);
+    -o-transform: scale(4);
+    -webkit-transform: scale(4);
+    transform: scale(4);
+    /* padding-bottom: 20px; */
+    position:relative;
+    top: 20px;
 }
 
 /* above 50 rem, we ditch the mobile menu  */
