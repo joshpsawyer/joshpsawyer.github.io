@@ -84,7 +84,7 @@ em, i {font-style: italic;}
 
 /* Lists */
 ul {
-	list-style: outside disc;
+	list-style: outside square;
 	margin: 0em 0 0 1.5em;
 }
 
