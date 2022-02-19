@@ -301,7 +301,7 @@ div#mobile-menu {
     align-items: center;
     justify-content: center;
     display: grid;
-    grid-template-rows: 1fr 1fr 2fr 1fr 1fr;
+    grid-template-rows: 64px 128px 1fr 64px 192px;
     grid-template-columns: 1fr;
     grid-template-areas:
     "."
@@ -413,7 +413,7 @@ img#mobilemenulogo {
     -o-transform: scale(4);
     -webkit-transform: scale(4);
     transform: scale(4);
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 }
 
 /* .mobile-nav--open span, 
