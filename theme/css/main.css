@@ -179,7 +179,7 @@ html {
 div.container {
     height: 100vh;
     display: grid;
-    grid-template-rows: 100px 1fr;
+    grid-template-rows: 72px 1fr;
     grid-template-columns: 1fr;
     grid-template-areas:
     "header"
@@ -211,18 +211,38 @@ div#headercontent {
     grid-area: headercontent;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: "headerlogo";
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "headerlogo"
+        "headerlogo"
+        "headerlogo";
 }
 
 section#sitelogo {
+    align-self: center;
+
     grid-area: headerlogo;
-    background-color: #115f6d;
+    /* background-color: #115f6d; */
     margin: 0 auto;
-    overflow: hidden;
+    /* text-align: left; */
+}
+
+section#sitelogo img {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    /* width: 128px; */
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+    -webkit-transform: scale(2);
+    transform: scale(2);
 }
 
 nav#menu {
     grid-area: headernav;
+    align-self: center;
+    text-align: center;
     /* background-color: #ffa08c; */
     /* text-align: center; */
     
@@ -440,19 +460,23 @@ div#mobile-menu ul li a {
     cursor:pointer;
 }
 
-img#mobilemenulogo {
+a#mobilemenulogo {
     grid-area: mobilelogo;
+    margin: 0 auto;
+
+    /* padding-bottom: 20px; */
+}
+
+a#mobilemenulogo img{
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
-    margin: 0 auto;
     /* width: 128px; */
     -moz-transform: scale(4);
     -ms-transform: scale(4);
     -o-transform: scale(4);
     -webkit-transform: scale(4);
     transform: scale(4);
-    /* padding-bottom: 20px; */
 }
 
 /* .mobile-nav--open span, 
@@ -564,25 +588,35 @@ img#mobilemenulogo {
         grid-template-columns: 1fr calc(var(--site-max-width)/5) calc(var(--site-max-width)/5*3) calc(var(--site-max-width)/5) 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: 
-        ". headerlogo . . ."
-        ". headerlogo . . ."
+        ". headerlogo headernav headersocial ."
+        ". headerlogo headernav headersocial ."
         ". headerlogo headernav headersocial .";
     }
 
     div#header-social {
         display: inline;
         grid-area: headersocial;
+        align-self: center;
     }
 }
 
 /* really big screens get more width in the nav area */
-@media all and (min-width: 64rem) {
+@media all and (min-width: 75rem) {
     div#headercontent {
         grid-template-columns: 1fr calc(var(--site-max-width)/4*3) calc(var(--site-max-width)/4*1) 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas:
-            "headerlogo . . ."
-            "headerlogo . . ."
+            "headerlogo headernav headersocial ."
+            "headerlogo headernav headersocial ."
             "headerlogo headernav headersocial .";
+    }
+
+    nav#menu {
+        /* grid-area: headernav; */
+        /* align-self: center; */
+        text-align: left;
+        /* background-color: #ffa08c; */
+        /* text-align: center; */
+        
     }
 }
