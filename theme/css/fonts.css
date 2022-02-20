@@ -16,12 +16,9 @@
 	font-style: normal;
 	font-weight: 400;
 	src:
-		/* local('Yanone Kaffeesatz Regular'), */
-		/* local('YanoneKaffeesatz-Regular'), */
-		/* from https://fonts.gstatic.com/s/yanonekaffeesatz/v8/YDAoLskQQ5MOAgvHUQCcLRTHiN2BPBirwIkMLKUspj4.woff */
 		url('../fonts/kenney_pixel-webfont.woff') format('woff'),
-		/* from https://fonts.gstatic.com/s/yanonekaffeesatz/v8/YDAoLskQQ5MOAgvHUQCcLfGwxTS8d1Q9KiDNCMKLFUM.woff2 */
 		url('../fonts/kenney_pixel-webfont.woff2') format('woff2');
+	font-display: swap;
 }
 
 @font-face {
@@ -29,23 +26,19 @@
 	font-style: normal;
 	font-weight: 400;
 	src:
-		/* local('Yanone Kaffeesatz Regular'), */
-		/* local('YanoneKaffeesatz-Regular'), */
-		/* from https://fonts.gstatic.com/s/yanonekaffeesatz/v8/YDAoLskQQ5MOAgvHUQCcLRTHiN2BPBirwIkMLKUspj4.woff */
 		url('../fonts/sharetechmono-regular-webfont.woff') format('woff'),
-		/* from https://fonts.gstatic.com/s/yanonekaffeesatz/v8/YDAoLskQQ5MOAgvHUQCcLfGwxTS8d1Q9KiDNCMKLFUM.woff2 */
 		url('../fonts/sharetechmono-regular-webfont.woff2') format('woff2');
+	font-display: swap;
 }
+
 
 @font-face {
 	font-family: 'TT Norms';
 	font-style: normal;
 	font-weight: 400;
 	src:
-		/* local('Yanone Kaffeesatz Regular'), */
-		/* local('YanoneKaffeesatz-Regular'), */
-		/* from https://fonts.gstatic.com/s/yanonekaffeesatz/v8/YDAoLskQQ5MOAgvHUQCcLRTHiN2BPBirwIkMLKUspj4.woff */
 		url('../fonts/ttnorms-regular-webfont.woff') format('woff'),
-		/* from https://fonts.gstatic.com/s/yanonekaffeesatz/v8/YDAoLskQQ5MOAgvHUQCcLfGwxTS8d1Q9KiDNCMKLFUM.woff2 */
 		url('../fonts/ttnorms-regular-webfont.woff2') format('woff2');
+	font-display: swap;
+	
 }
