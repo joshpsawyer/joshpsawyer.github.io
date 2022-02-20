@@ -21,6 +21,7 @@
     --color-index-3: #426e5d;
     --color-index-4: #20283d;
     /* https://lospec.com/palette-list/en4 */
+    --color-index-5: #f0b923;
 }
 
 /***** Global *****/
@@ -97,9 +98,9 @@ li { margin-top: 0.5em;
      margin-bottom: 1em; }
 
 .post-info {
-    float:right;
-    margin:10px;
-    padding:5px;
+    /* float:right; */
+    margin:10px 0;
+    /* padding:5px; */
 }
 
 .post-info p{
@@ -239,6 +240,36 @@ section#sitelogo img {
     transform: scale(2);
 }
 
+img.pixelart {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+img.zoomx2 {
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+    -webkit-transform: scale(2);
+    transform: scale(2);
+}
+
+img.zoomx3 {
+    -moz-transform: scale(3);
+    -ms-transform: scale(3);
+    -o-transform: scale(3);
+    -webkit-transform: scale(3);
+    transform: scale(3);
+}
+
+img.zoomx4 {
+    -moz-transform: scale(4);
+    -ms-transform: scale(4);
+    -o-transform: scale(4);
+    -webkit-transform: scale(4);
+    transform: scale(4);
+}
+
 nav#menu {
     grid-area: headernav;
     align-self: center;
@@ -327,7 +358,8 @@ div#portfoliogrid {
 
 div.portfolioentry {
     grid-column: span 2;
-    background-color: #f0b923;
+    /* background-color: #f0b923; */
+    line-height: 1;
 }
 
 /* Anchors */
