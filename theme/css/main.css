@@ -288,7 +288,7 @@ nav#menu ul li.active a, nav#menu ul li.active a:visited {
 main#content {
     grid-area: content;
     background-color: var(--color-index-1);
-    padding: 15px 5px 10px 5px;
+    padding: 10px 0px;
     display: grid;
     grid-template-columns: 10px 1fr 10px;
     grid-template-areas: ". maincontent .";
@@ -304,13 +304,17 @@ footer#contentinfo {
     background-color: var(--color-index-2);
     display: grid;
     grid-template-columns: 10px 1fr 10px;
-    grid-template-areas: ". footercontent. ";
-
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        ". footercontent. "
+        ". footercontent. "
+        ". footercontent. ";
 }
 
 div#footercontent {
     grid-area: footercontent;
     margin: 0 auto;
+    align-self: center;
 
 }
 
@@ -500,7 +504,7 @@ a#mobilemenulogo img{
 
 
 #header-social {
-    text-align: right;
+    text-align: center;
 }
 
 #header-social .social-icon {
@@ -554,7 +558,7 @@ a#mobilemenulogo img{
 }
 
 /* above 50 rem, we ditch the mobile menu  */
-@media all and (min-width: 50rem) {
+@media all and (min-width: 52rem) {
     /* add the columns on either side to prevent the website from stretching too wide */
     header#banner {
         grid-template-columns: 1fr;
@@ -568,7 +572,7 @@ a#mobilemenulogo img{
 
     footer#contentinfo {
         grid-template-columns: 1fr var(--site-max-width) 1fr;
-        grid-template-areas: ". footercontent . ";    
+        /* grid-template-areas: ". footercontent . ";     */
     }
     
     /* hide the mobile nav, show the non-mobile nav */
@@ -585,12 +589,12 @@ a#mobilemenulogo img{
     }
 
     div#headercontent {
-        grid-template-columns: 1fr calc(var(--site-max-width)/5) calc(var(--site-max-width)/5*3) calc(var(--site-max-width)/5) 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: 
-        ". headerlogo headernav headersocial ."
-        ". headerlogo headernav headersocial ."
-        ". headerlogo headernav headersocial .";
+        grid-template-areas:
+            "headerlogo headernav headersocial"
+            "headerlogo headernav headersocial"
+            "headerlogo headernav headersocial";
     }
 
     div#header-social {
@@ -603,18 +607,18 @@ a#mobilemenulogo img{
 /* really big screens get more width in the nav area */
 @media all and (min-width: 75rem) {
     div#headercontent {
-        grid-template-columns: 1fr calc(var(--site-max-width)/4*3) calc(var(--site-max-width)/4*1) 1fr;
+        grid-template-columns: 1fr auto 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas:
-            "headerlogo headernav headersocial ."
-            "headerlogo headernav headersocial ."
-            "headerlogo headernav headersocial .";
+            "headerlogo headernav headersocial"
+            "headerlogo headernav headersocial"
+            "headerlogo headernav headersocial";
     }
 
     nav#menu {
         /* grid-area: headernav; */
         /* align-self: center; */
-        text-align: left;
+        text-align: center;
         /* background-color: #ffa08c; */
         /* text-align: center; */
         
