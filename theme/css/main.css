@@ -238,6 +238,7 @@ section#sitelogo img {
     -o-transform: scale(2);
     -webkit-transform: scale(2);
     transform: scale(2);
+    vertical-align: middle;
 }
 
 img.pixelart {
@@ -562,6 +563,7 @@ a#mobilemenulogo img{
     /* padding-bottom: 20px; */
     position:relative;
     /* top: 20px; */
+    vertical-align: middle;
 }
 
 #mobile-social .social-icon {
