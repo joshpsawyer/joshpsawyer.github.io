@@ -336,12 +336,12 @@ div#maincontent {
 }
 
 footer#contentinfo {
-    height: 4rem;
+    height: 7rem;
     grid-area: footer;
     background-color: var(--color-index-2);
     display: grid;
     grid-template-columns: 10px 1fr 10px;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
         ". footercontent. "
         ". footercontent. "
@@ -352,7 +352,6 @@ div#footercontent {
     grid-area: footercontent;
     margin: 0 auto;
     align-self: center;
-
 }
 
 div#portfoliogrid {
@@ -700,13 +699,25 @@ section#content h1:first-child {
     font-size: 1.5rem;
 }
 
-div#signatureblock {
+section#content h1.entry-title:first-child {
+    color: var(--color-index-4);
+    font-size: 2rem;
+}
+/* h1 class="" */
+
+
+/* div#signatureblock {
     text-align: center;
     margin: 2rem 0 1rem 0;
     line-height: 2rem;
-}
+} */
 
 img.signature {
-    vertical-align: middle;
+    display: block;
     margin: 0 auto;
+}
+
+span.copyright {
+    display: block;
+    margin: 1rem 0;
 }
