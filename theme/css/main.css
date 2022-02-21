@@ -22,15 +22,13 @@
     --color-index-4: #20283d;
     /* https://lospec.com/palette-list/en4 */
     --color-index-5: #f0b923;
-    --color-index-6: #797c82;
 }
 
 /***** Global *****/
 /* Body */
 body {
     /* background: var(--color-index-1); */
-    color: var(--color-index-1);
-    background-color: var(--color-index-6);
+    color: var(--color-index-4);
     /* font-size: 87.5%; Base font size: 14px; */
     font-family: 'TT Norms', sans-serif;
     line-height: 1.5em;
@@ -48,7 +46,6 @@ h5 {font-size: 1.143em}	/* 16px */
 h6 {font-size: 1em}		/* 14px */
 
 h1, h2, h3, h4, h5, h6 {
-    color: var(--color-index-2);
 	font-weight: 400;
 	line-height: 1.1;
 	margin-bottom: .8em;
@@ -62,7 +59,7 @@ h1.categorytitle {
     color: var(--color-index-2);
 }
 
-hr { border: 1px solid var(--color-index-2); width: 50%; }
+hr { border: 1px solid var(--color-index-3); }
 
 /* Anchors */
 a {outline: 0;}
@@ -197,7 +194,7 @@ div.container {
 
 header#banner {
     grid-area: header;
-    background-color: var(--color-index-4);
+    background-color: var(--color-index-2);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -205,7 +202,8 @@ header#banner {
 }
 
 div#hey {
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: scroll;
     grid-area:maincontent;
     z-index: 10;
     display: grid;
@@ -328,7 +326,7 @@ nav#menu ul li.active a, nav#menu ul li.active a:visited {
 
 main#content {
     grid-area: content;
-    background-color: #797c82;
+    background-color: var(--color-index-1);
     padding: 10px 0px;
     display: grid;
     grid-template-columns: 10px 1fr 10px;
@@ -342,12 +340,10 @@ div#maincontent {
 footer#contentinfo {
     height: 7rem;
     grid-area: footer;
-    background-color: var(--color-index-4);
+    background-color: var(--color-index-2);
     display: grid;
     grid-template-columns: 10px 1fr 10px;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        ". footercontent. "
+    grid-template-rows: 1fr 1fr;    grid-template-areas:
         ". footercontent. "
         ". footercontent. ";
 }
@@ -356,6 +352,7 @@ div#footercontent {
     grid-area: footercontent;
     margin: 0 auto;
     align-self: center;
+
 }
 
 div#portfoliogrid {
@@ -371,15 +368,11 @@ div.portfolioentry {
     line-height: 1;
 }
 
-/* .portfolioentry img {
-    border: 2px solid var(--color-index-4);
-} */
-
 /* Anchors */
 a {outline: 0;}
 a img {border: 0px; text-decoration: none;}
 a:link, a:visited {
-	color: var(--color-index-2);
+	color: var(--color-index-4);
 	/* padding: 0 1px; */
 	text-decoration: underline;
 }
@@ -478,7 +471,6 @@ div#mobile-menu ul li:hover {
 }
 
 div#mobile-menu ul li a {
-    color: var(--color-index-4);
     text-decoration: none;
     display: block;
     width: 100%;
@@ -704,16 +696,9 @@ article.wordz h2 {
 }
 
 section#content h1:first-child {
-    /* color: var(--color-index-2); */
+    color: var(--color-index-2);
     font-size: 1.5rem;
 }
-
-section#content h1.entry-title:first-child {
-    /* color: var(--color-index-4); */
-    font-size: 2rem;
-}
-/* h1 class="" */
-
 
 /* div#signatureblock {
     text-align: center;
