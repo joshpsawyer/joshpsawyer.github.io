@@ -18,7 +18,7 @@
 	src:
 		url('../fonts/kenney_pixel-webfont.woff') format('woff'),
 		url('../fonts/kenney_pixel-webfont.woff2') format('woff2');
-	font-display: swap;
+	/* font-display: swap; */
 }
 
 @font-face {
@@ -28,7 +28,7 @@
 	src:
 		url('../fonts/sharetechmono-regular-webfont.woff') format('woff'),
 		url('../fonts/sharetechmono-regular-webfont.woff2') format('woff2');
-	font-display: swap;
+	/* font-display: swap; */
 }
 
 
@@ -39,6 +39,6 @@
 	src:
 		url('../fonts/ttnorms-regular-webfont.woff') format('woff'),
 		url('../fonts/ttnorms-regular-webfont.woff2') format('woff2');
-	font-display: swap;
+	/* font-display: swap; */
 	
 }
