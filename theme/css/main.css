@@ -54,14 +54,19 @@ h1, h2, h3, h4, h5, h6 {
 
 h3, h4, h5, h6 { margin-top: .8em; }
 
-hr { border: 2px solid #EEEEEE; }
+h1.categorytitle {
+    font-size: 1.5rem;
+    color: var(--color-index-2);
+}
+
+hr { border: 1px solid var(--color-index-3); }
 
 /* Anchors */
 a {outline: 0;}
 a img {border: 0px; text-decoration: none;}
 a:link, a:visited {
 	/* color: #C74350; */
-	padding: 0 1px;
+	/* padding: 0 1px; */
 	text-decoration: underline;
 }
 a:hover, a:active {
@@ -229,15 +234,15 @@ section#sitelogo {
 }
 
 section#sitelogo img {
-    image-rendering: pixelated;
+    /* image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
-    /* width: 128px; */
-    -moz-transform: scale(2);
+    width: 128px; */
+    /* -moz-transform: scale(2);
     -ms-transform: scale(2);
     -o-transform: scale(2);
     -webkit-transform: scale(2);
-    transform: scale(2);
+    transform: scale(2); */
     vertical-align: middle;
 }
 
@@ -368,7 +373,7 @@ a {outline: 0;}
 a img {border: 0px; text-decoration: none;}
 a:link, a:visited {
 	color: var(--color-index-4);
-	padding: 0 1px;
+	/* padding: 0 1px; */
 	text-decoration: underline;
 }
 a:hover, a:active {
@@ -657,4 +662,51 @@ a#mobilemenulogo img{
         /* text-align: center; */
         
     }
+}
+
+article.wordz {
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+}
+
+a.wordz:nth-child(even) article {
+    border-left: 2px solid var(--color-index-3);
+    border-bottom: 2px solid var(--color-index-3);
+}
+a.wordz:nth-child(odd) article {
+    border-left: 2px solid var(--color-index-4);
+    border-bottom: 2px solid var(--color-index-4);
+}
+
+a.wordz {
+    text-decoration: none;
+}
+
+/* a:hover.wordz {
+    color: var(--color-index-2);
+    background: var(--color-index-3);
+} */
+
+article.wordz address {
+    display: inline;
+}
+
+article.wordz h2 {
+    font-size: 2rem;
+}
+
+section#content h1:first-child {
+    color: var(--color-index-2);
+    font-size: 1.5rem;
+}
+
+div#signatureblock {
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+    line-height: 2rem;
+}
+
+img.signature {
+    vertical-align: middle;
+    margin: 0 auto;
 }
