@@ -330,9 +330,9 @@ nav#menu ul li.active a, nav#menu ul li.active a:visited {
 main#content {
     grid-area: content;
     background-color: var(--color-index-1);
-    padding: 10px 0px;
+    padding: 0.25rem 0;
     display: grid;
-    grid-template-columns: 10px 1fr 10px;
+    grid-template-columns: 0.25rem 1fr 0.25rem;
     grid-template-areas: ". maincontent .";
 }
 
@@ -345,7 +345,7 @@ footer#contentinfo {
     grid-area: footer;
     background-color: var(--color-index-2);
     display: grid;
-    grid-template-columns: 10px 1fr 10px;
+    grid-template-columns: 0.25rem 1fr 0.25rem;
     grid-template-rows: 1fr 1fr;    grid-template-areas:
         ". footercontent. "
         ". footercontent. ";
@@ -361,8 +361,8 @@ div#footercontent {
 div#portfoliogrid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-row-gap: 20px;
-    grid-column-gap: 20px;
+    grid-row-gap: 0.25rem;
+    grid-column-gap: 0.25rem;
 }
 
 div.portfolioentry {
@@ -643,6 +643,15 @@ a#mobilemenulogo img{
         display: inline;
         grid-area: headersocial;
         align-self: center;
+    }
+
+    main#content {
+        padding: 0.5rem 0;
+    }
+
+    div#portfoliogrid {
+        grid-row-gap: 0.5rem;
+        grid-column-gap: 0.5rem;
     }
 }
 
