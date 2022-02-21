@@ -29,6 +29,7 @@
 body {
     /* background: var(--color-index-1); */
     color: var(--color-index-4);
+    background: var(--color-index-1);
     /* font-size: 87.5%; Base font size: 14px; */
     font-family: 'TT Norms', sans-serif;
     line-height: 1.5em;
@@ -210,10 +211,11 @@ div#hey {
     grid-area:maincontent;
     z-index: 10;
     display: grid;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: 1fr auto auto;
     grid-template-columns: 1fr;
     grid-template-areas:
     "content"
+    "colophon"
     "footer";
 }
 
@@ -340,13 +342,25 @@ div#maincontent {
     grid-area: maincontent;
 }
 
+#colophon {
+    height: 4rem;
+    grid-area: colophon;
+    line-height: 4rem;
+    /* display: grid;
+    grid-template-columns: 0.25rem 1fr 0.25rem;
+    grid-template-rows: 1fr 1fr;    grid-template-areas:
+        ". footercontent. "
+        ". footercontent. "; */
+}
+
 footer#contentinfo {
-    height: 7rem;
+    height: 3rem;
     grid-area: footer;
     background-color: var(--color-index-2);
     display: grid;
     grid-template-columns: 0.25rem 1fr 0.25rem;
-    grid-template-rows: 1fr 1fr;    grid-template-areas:
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
         ". footercontent. "
         ". footercontent. ";
 }
