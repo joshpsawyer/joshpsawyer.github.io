@@ -739,5 +739,5 @@ img.signature {
 
 span.copyright {
     display: block;
-    margin: 1rem 0;
+    /* margin: 1rem 0; */
 }
