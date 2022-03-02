@@ -741,3 +741,40 @@ span.copyright {
     display: block;
     /* margin: 1rem 0; */
 }
+
+.kofi-promo {
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    /* background-color: ; */
+    /* border-top: 4px solid #FF5E5B; */
+    /* border-bottom: 4px solid #FF5E5B; */
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    text-align: center;
+    grid-template-areas:
+    "maincontent"
+    "button";
+}
+
+img.kofi-button {
+    margin: 0 auto;
+    grid-area: "button";
+}
+
+.kofi-content {
+    grid-area: "maincontent";
+    font-size: 2rem;
+    font-family: "Kenney Pixel", 'Share Tech Mono', 'Courier Prime', 'Courier New', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    /* font-style: italic; */
+}
+
+blockquote.twitter-tweet {
+    /* background-color: #f2f0e5; */
+    border-left: 2px solid #68c2d3;
+    padding: 1rem 2rem;
+    font-style: normal;
+    margin: 0;
+}

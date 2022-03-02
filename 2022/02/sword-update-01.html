@@ -2,15 +2,17 @@
 
 <html lang="en">
 <head>
-<title>Miscellaneous Older Digital Work - josh's internet scrapyard</title>
+<title>Project Sword Devlog: First Thoughts - josh's internet scrapyard</title>
 <meta charset="utf-8"/>
 <meta content="Pelican" name="generator"/>
-<meta content="Various older pieces." name="description"/>
+<meta content="" name="description"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../theme/css/main.min.css?651c5649" rel="stylesheet"/>
 <link href="https://joshpsawyer.com/feeds/all.atom.xml" rel="alternate" title="josh's internet scrapyard Full Atom Feed" type="application/atom+xml"/>
 <link href="../../theme/images/favicon2.ico" rel="icon" type="image/x-icon"/>
-<meta content="digital" name="tags">
+<meta content="devlog" name="tags">
+<meta content="project-sword" name="tags"/>
+<meta content="project-sword-devlog" name="tags"/>
 </meta></head>
 <body class="home" id="index">
 <div class="container">
@@ -24,8 +26,8 @@
 <span class="sr-only"></span>
 </a>
 <nav id="menu"><ul>
-<li class="active"><a href="../../categories/artz.html">Artz</a></li>
-<li><a href="../../categories/wordz.html">Wordz</a></li>
+<li><a href="../../categories/artz.html">Artz</a></li>
+<li class="active"><a href="../../categories/wordz.html">Wordz</a></li>
 <li><a href="../../pages/about.html">Aboutz</a></li>
 <li><a href="https://www.inprnt.com/gallery/catmeister/" rel="nofollow" target="_blank">Printz</a></li>
 </ul>
@@ -42,8 +44,8 @@
 <span class="sr-only"></span>
 </a>
 <nav id="mobile-nav"><ul>
-<li class="active"><a href="../../categories/artz.html">Artz</a></li>
-<li><a href="../../categories/wordz.html">Wordz</a></li>
+<li><a href="../../categories/artz.html">Artz</a></li>
+<li class="active"><a href="../../categories/wordz.html">Wordz</a></li>
 <li><a href="../../pages/about.html">Aboutz</a></li>
 <li><a href="https://www.inprnt.com/gallery/catmeister/">Printz</a></li>
 </ul>
@@ -61,38 +63,71 @@
 <main id="content">
 <div id="maincontent">
 <section class="body" id="content">
-<img src="../../images/older_digital_work/kelsey_snow_photo.png">
 <header>
-<h1 class="entry-title">Miscellaneous Older Digital Work
+<h1 class="entry-title">Project Sword Devlog: First Thoughts
 <hr/>
 </h1></header>
 <div class="entry-content">
-<p>Various older pieces, some studies, some originals.</p>
-<p><img src="../../images/older_digital_work/burning_man_train_shot_ig.jpg">
-<img src="../../images/older_digital_work/drawtober_carvings.png">
-<img src="../../images/older_digital_work/study_snow_01.jpg">
-<img src="../../images/older_digital_work/windmill_export.png"/></img></img></img></p>
+<p>My first <em>serious</em> foray into game development is underway. I'm developing a small
+topdown action game that will feel like an old action RPG - e.g. Secret of Evermore -
+with minimal combat. It's inspired by this tweet:</p>
+<blockquote class="twitter-tweet"><p dir="ltr" lang="en">NYE parties are both wackand dangerous rn. So<br/><br/>On New Years Eve, everyone write down a mythical weapon they want to wield in 2022. Create the legend behind it, what it looks like, what power it possesses, etc<br/><br/>Then, tomorrow, you start your 365 day quest to find or forge it.</p>— 🎃Aaron Catano-Saez🇵🇷 (@AaronCatanoSaez) <a href="https://twitter.com/AaronCatanoSaez/status/1476909963217969163?ref_src=twsrc%5Etfw">December 31, 2021</a></blockquote>
+<p>It's light in scope - more of a learning experiment than a full game, but it will
+have a story and some combat and some weird stuff in it. It's got a sword in it. Hence... Project Sword.</p>
+<p>My tech stack is as follows:</p>
+<ul>
+<li>Unity - as an engine with the following packages<ul>
+<li>Ink Unity Integration</li>
+<li>Auto Importer for Aseprite Pro</li>
+<li>ScriptableObjects-Architechture</li>
+</ul>
+</li>
+<li>VS Code - as C# editor</li>
+<li><a href="https://www.aseprite.org/">Aseprite</a> - for all pixel art assets &amp; animation</li>
+<li><a href="https://github.com/inkle/inky">Inky</a> - for editing <a href="https://www.inklestudios.com/ink/">Ink Dialogues</a></li>
+</ul>
+<p>Rather than take a programming heavy approach, I'm trying <em>really hard</em> to keep
+things decoupled and pass around events and make use of ScriptableObjects. To this
+end, I've aleady coded some pretty cool things, including:</p>
+<ul>
+<li>ScriptableObject World Variables</li>
+<li>A WorldVariable Manager to save / load world variable configurations</li>
+<li>A ScriptableObject Condition system, allowing you to create logical statements
+    involving the state of the world / the player's inventory / etc. to drive
+    other behavior (e.g. a locked door that only opens if the player has a key or
+    has passed some other milestone)</li>
+</ul>
+<p>I'll share how I've implemented each idea in future tutorials. I've got a huge list
+of things I want to talk about and I'm hoping that I'm not talking into the void.
+That's okay too, though!</p>
 </div><!-- /.entry-content -->
+<div class="kofi-promo">
+<a href="https://ko-fi.com/catmeister" rel="nofollow" target="_blank">
+<img alt="support me on ko-fi" class="kofi-button" src="../../theme/images/kofi.png">
+</img></a>
+<!-- <div class="kofi-content">
+        Get exclusive discounts and early access on my Ko-Fi!
+    </div> -->
+</div>
 <hr/>
 <footer class="post-info">
-<time class="published" datetime="2021-01-01T10:16:00-05:00">
-      Posted: 2021-01-01
-    </time>
-<time class="modified" datetime="2022-02-21T10:16:00-05:00">
-      / Modified: 2022-02-21
+<time class="published" datetime="2022-02-28T10:20:00-05:00">
+      Posted: 2022-02-28
     </time>
 <address class="vcard author">
       By           <a class="url fn" href="../../author/josh.html">josh</a>
 </address>
 <div class="category">
-        Category: <a href="../../categories/artz.html">Artz</a>
+        Category: <a href="../../categories/wordz.html">Wordz</a>
 </div>
 <div class="tags">
         Tags:
-            <a href="../../tags/digital.html">digital</a>
+            <a href="../../tags/devlog.html">devlog</a>
+<a href="../../tags/project-sword.html">project-sword</a>
+<a href="../../tags/project-sword-devlog.html">project-sword-devlog</a>
 </div>
 </footer><!-- /.post-info -->
-</img></section>
+</section>
 </div>
 </main>
 <div id="colophon">
