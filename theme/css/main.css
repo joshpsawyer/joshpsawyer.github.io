@@ -332,12 +332,15 @@ nav#menu ul li.active a, nav#menu ul li.active a:visited {
 main#content {
     grid-area: content;
     background-color: var(--color-index-1);
-    padding: 0.25rem 0;
+    padding: 0;
     display: grid;
-    grid-template-columns: 0.25rem 1fr 0.25rem;
-    grid-template-areas: ". maincontent .";
+    grid-template-columns: 1fr;
+    grid-template-areas: "maincontent";
 }
 
+section#content {
+    padding: 0 1rem;
+}
 div#maincontent {
     grid-area: maincontent;
 }
@@ -374,9 +377,9 @@ div#footercontent {
 
 div#portfoliogrid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-row-gap: 0.25rem;
-    grid-column-gap: 0.25rem;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-row-gap: 0.25rem; */
+    /* grid-column-gap: 0.25rem; */
 }
 
 div.portfolioentry {
@@ -660,12 +663,17 @@ a#mobilemenulogo img{
     }
 
     main#content {
-        padding: 0.5rem 0;
+        padding: 0;
+    }
+
+    section#content {
+        padding: 0;
     }
 
     div#portfoliogrid {
-        grid-row-gap: 0.5rem;
-        grid-column-gap: 0.5rem;
+        grid-template-columns: repeat(6, 1fr);
+        /* grid-row-gap: 0.5rem; */
+        /* grid-column-gap: 0.5rem; */
     }
 }
 
