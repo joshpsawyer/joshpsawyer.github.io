@@ -49,8 +49,14 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
 	line-height: 1.1;
 	margin-bottom: .8em;
-    font-family: "Kenney Pixel", 'Share Tech Mono', 'Courier Prime', 'Courier New', sans-serif;;
+    font-family: "Kenney Pixel", 'Share Tech Mono', 'Courier Prime', 'Courier New', sans-serif;
 }
+
+span.kenneypixel {
+    font-family: "Kenney Pixel", 'Share Tech Mono', 'Courier Prime', 'Courier New', sans-serif;
+    font-size: 1.5em;
+}
+
 
 h3, h4, h5, h6 { margin-top: .8em; }
 
@@ -80,7 +86,7 @@ a:hover, a:active {
 }
 
 h1 a:hover {
-    background-color: inherit
+    background-color: inherit;
 }
 
 /* Paragraphs */
@@ -457,14 +463,13 @@ div#mobile-menu {
     align-items: center;
     justify-content: center;
     display: grid;
-    grid-template-rows: 64px 128px 1fr 64px 192px;
+    grid-template-rows: 6rem 1fr 6rem 12rem;
     grid-template-columns: 1fr;
     grid-template-areas:
     "."
-    "mobilelogo"
     "mobilenav"
     "mobilesocial"
-    ".";
+    "mobilelogo";
     z-index: 30;
     height: 100vh;
     background: var(--color-off-white);
@@ -569,11 +574,11 @@ a#mobilemenulogo img{
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
     /* width: 128px; */
-    -moz-transform: scale(4);
+    /* -moz-transform: scale(4);
     -ms-transform: scale(4);
     -o-transform: scale(4);
     -webkit-transform: scale(4);
-    transform: scale(4);
+    transform: scale(4); */
 }
 
 /* .mobile-nav--open span, 
@@ -822,4 +827,10 @@ blockquote.twitter-tweet {
     padding: 1rem 2rem;
     font-style: normal;
     margin: 0;
+}
+
+img.joshportrait {
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 2px solid var(--color-off-dark-blue);
 }
