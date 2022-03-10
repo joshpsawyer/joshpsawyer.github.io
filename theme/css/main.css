@@ -847,3 +847,7 @@ img.joshportrait {
     text-align: center;
     border-bottom: 2px solid var(--color-blue-dark);
 }
+
+img.bannerbutton {
+    margin: 0.25rem;
+}
