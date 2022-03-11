@@ -366,6 +366,7 @@ div#maincontent {
     height: 4rem;
     grid-area: colophon;
     line-height: 4rem;
+    margin: 1rem 0;
     /* display: grid;
     grid-template-columns: 0.25rem 1fr 0.25rem;
     grid-template-rows: 1fr 1fr;    grid-template-areas:
