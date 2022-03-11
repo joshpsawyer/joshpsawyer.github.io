@@ -374,28 +374,22 @@ div#maincontent {
 }
 
 footer#contentinfo {
-    height: 10rem;
+    height: 3rem;
     grid-area: footer;
     background-color: var(--color-peach-light);
     display: grid;
     grid-template-columns: 0.25rem 1fr 0.25rem;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
-        ". footercontentone . "
-        ". footercontenttwo . ";
+        ". footercontent. "
+        ". footercontent. ";
 }
 
-div#footercontentone {
-    grid-area: footercontentone;
+div#footercontent {
+    grid-area: footercontent;
     margin: 0 auto;
     align-self: center;
 
-}
-
-div#footercontenttwo {
-    grid-area: footercontenttwo;
-    margin: 0 auto;
-    align-self: center;
 }
 
 div#portfoliogrid {
@@ -858,10 +852,13 @@ img.bannerbutton {
     margin: 0.25rem;
 }
 
-/* webring stuff */
 #donaldsonwebring {
     margin: 0 auto;
+    font-size: 2rem;
     padding: 15px; /* creates some space around the widget */
+    background-color: var(--color-green-light);
+    border: 1px solid var(--color-green-medium);
+    font-family: "Kenney Pixel", 'Share Tech Mono', 'Courier Prime', 'Courier New', sans-serif;
   }
   
   #donaldsonwebring table {
@@ -869,12 +866,14 @@ img.bannerbutton {
   }
   
   #donaldsonwebring table tr td {
-    padding: 15px; /* creates some space between the links and text inside the widget */
+    
     width: 33%;
   }
   
   #donaldsonwebring .webring-prev {
     text-align:right;
+    /* border: 1px solid var(--color-green-medium); */
+    /* background-color: var(--color-green-light); */
   }
   
   #donaldsonwebring .webring-info {
@@ -883,17 +882,14 @@ img.bannerbutton {
   
   #donaldsonwebring .webring-next {
     text-align:left;
+    /* border: 1px solid var(--color-green-medium); */
+    /* background-color: var(--color-green-light); */
   }
   
   #donaldsonwebring .webring-links {
-    font-size:small;
+    /* font-size:small; */
   }
   
-#donaldsonwebring a {
-    padding: 0.25rem;
-}
-
-#donaldsonwebring a:hover, #donaldsonwebring a:active {
-    color: var(--color-peach-light);
-    background-color: var(--color-blue-dark);
-}
+  #donaldsonwebring td.webring-next a, #donaldsonwebring td.webring-prev a {
+      display: block;
+  }
