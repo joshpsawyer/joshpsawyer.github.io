@@ -374,22 +374,28 @@ div#maincontent {
 }
 
 footer#contentinfo {
-    height: 3rem;
+    height: 10rem;
     grid-area: footer;
     background-color: var(--color-peach-light);
     display: grid;
     grid-template-columns: 0.25rem 1fr 0.25rem;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
-        ". footercontent. "
-        ". footercontent. ";
+        ". footercontentone . "
+        ". footercontenttwo . ";
 }
 
-div#footercontent {
-    grid-area: footercontent;
+div#footercontentone {
+    grid-area: footercontentone;
     margin: 0 auto;
     align-self: center;
 
+}
+
+div#footercontenttwo {
+    grid-area: footercontenttwo;
+    margin: 0 auto;
+    align-self: center;
 }
 
 div#portfoliogrid {
@@ -850,4 +856,44 @@ img.joshportrait {
 
 img.bannerbutton {
     margin: 0.25rem;
+}
+
+/* webring stuff */
+#donaldsonwebring {
+    margin: 0 auto;
+    padding: 15px; /* creates some space around the widget */
+  }
+  
+  #donaldsonwebring table {
+    margin: 0 auto; /* centers the widget */
+  }
+  
+  #donaldsonwebring table tr td {
+    padding: 15px; /* creates some space between the links and text inside the widget */
+    width: 33%;
+  }
+  
+  #donaldsonwebring .webring-prev {
+    text-align:right;
+  }
+  
+  #donaldsonwebring .webring-info {
+     text-align:center;
+  }
+  
+  #donaldsonwebring .webring-next {
+    text-align:left;
+  }
+  
+  #donaldsonwebring .webring-links {
+    font-size:small;
+  }
+  
+#donaldsonwebring a {
+    padding: 0.25rem;
+}
+
+#donaldsonwebring a:hover, #donaldsonwebring a:active {
+    color: var(--color-peach-light);
+    background-color: var(--color-blue-dark);
 }
