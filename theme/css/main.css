@@ -476,13 +476,14 @@ div#mobile-menu {
     align-items: center;
     justify-content: center;
     display: grid;
-    grid-template-rows: 6rem 1fr 6rem 12rem;
+    grid-template-rows: 4rem 1fr 6rem 6rem 8rem;
     grid-template-columns: 1fr;
     grid-template-areas:
     "."
     "mobilenav"
     "mobilesocial"
-    "mobilelogo";
+    "mobilelogo"
+    ".";
     z-index: 30;
     height: 100vh;
     background: var(--color-off-white);
