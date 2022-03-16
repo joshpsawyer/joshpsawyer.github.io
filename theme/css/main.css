@@ -375,7 +375,7 @@ div#maincontent {
 }
 
 footer#contentinfo {
-    height: 3rem;
+    height: auto;
     grid-area: footer;
     background-color: var(--color-peach-light);
     display: grid;
@@ -856,26 +856,13 @@ img.bannerbutton {
 
 #donaldsonwebring {
     margin: 0 auto;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 15px; /* creates some space around the widget */
-    background-color: var(--color-green-light);
-    border: 1px solid var(--color-green-medium);
     font-family: "Kenney Pixel", 'Share Tech Mono', 'Courier Prime', 'Courier New', sans-serif;
-  }
-  
-  #donaldsonwebring table {
-    margin: 0 auto; /* centers the widget */
-  }
-  
-  #donaldsonwebring table tr td {
-    
-    width: 33%;
   }
   
   #donaldsonwebring .webring-prev {
     text-align:right;
-    /* border: 1px solid var(--color-green-medium); */
-    /* background-color: var(--color-green-light); */
   }
   
   #donaldsonwebring .webring-info {
@@ -884,14 +871,45 @@ img.bannerbutton {
   
   #donaldsonwebring .webring-next {
     text-align:left;
-    /* border: 1px solid var(--color-green-medium); */
-    /* background-color: var(--color-green-light); */
   }
   
-  #donaldsonwebring .webring-links {
-    /* font-size:small; */
-  }
-  
-  #donaldsonwebring td.webring-next a, #donaldsonwebring td.webring-prev a {
-      display: block;
-  }
+
+#donaldsonwebring .webring {
+    display: grid;
+    grid-column-gap: 0.25rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#donaldsonwebring div {
+    display: block;
+}
+
+#donaldsonwebring .webring a {
+    padding: 2px 4px;
+    text-decoration: none;
+    color: var(--color-green-medium);
+}
+
+#donaldsonwebring .webring a:hover {
+    color: var(--color-peach-light);
+    background: var(--color-green-medium);
+}
+
+/* nav#menu ul li.active a, nav#menu ul li.active a:visited {
+    color: var(--color-peach-light);
+    background: var(--color-green-medium);
+} */
+
+.copyright {
+    text-align: center;
+}
+
+.webring-prev a::before {
+    content: "<<<";
+    padding-right: 0.3rem;
+}
+
+.webring-next a::after {
+    content: ">>>";
+    padding-left: 0.3rem
+}
