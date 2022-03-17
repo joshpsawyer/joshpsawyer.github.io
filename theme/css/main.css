@@ -214,11 +214,12 @@ div.container {
 
 header#banner {
     grid-area: header;
-    background-color: var(--color-peach-light);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
         "headercontent";
+    border-bottom: 16px solid transparent;
+    border-image: url("../images/topspike.png") 16 round;
 }
 
 div#hey {
@@ -236,6 +237,7 @@ div#hey {
 }
 
 div#headercontent {
+    background-color: var(--color-peach-light);
     grid-area: headercontent;
     display: grid;
     grid-template-columns: 1fr;
@@ -244,6 +246,7 @@ div#headercontent {
         "headerlogo"
         "headerlogo"
         "headerlogo";
+    /* border-bottom: 4px dashed var(--color-off-white); */
 }
 
 section#sitelogo {
@@ -363,10 +366,10 @@ div#maincontent {
 }
 
 #colophon {
-    height: 4rem;
+    height: auto;
     grid-area: colophon;
-    line-height: 4rem;
-    margin: 1rem 0;
+    /* line-height: 4rem; */
+    margin: 2rem 0;
     /* display: grid;
     grid-template-columns: 0.25rem 1fr 0.25rem;
     grid-template-rows: 1fr 1fr;    grid-template-areas:
@@ -378,12 +381,15 @@ footer#contentinfo {
     height: auto;
     grid-area: footer;
     background-color: var(--color-peach-light);
+    /* border-top: 4px dashed var(--color-off-white); */
     display: grid;
     grid-template-columns: 0.25rem 1fr 0.25rem;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
         ". footercontent. "
         ". footercontent. ";
+    border-top: 16px solid transparent;
+    border-image: url("../images/bottomspike.png") 16 round;
 }
 
 div#footercontent {
@@ -392,6 +398,45 @@ div#footercontent {
     align-self: center;
 
 }
+
+
+footer.article-post-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "author date"
+        "tags tags"
+        "category category";
+    grid-row-gap: 0.25rem;
+    border: 4px dashed var(--color-peach-light);
+    /* margin: 0 3rem; */
+    padding: 1rem 1rem;
+}
+
+footer.article-post-info .tags {
+    grid-area: tags;
+}
+
+footer.article-post-info .category {
+    grid-area: category;
+    /* text-align: right; */
+    text-transform: lowercase;
+}
+
+footer.article-post-info .date {
+    grid-area: date;
+    text-align: right;
+}
+
+footer.article-post-info .author {
+    grid-area: author;
+}
+
+footer.article-post-info a {
+    text-decoration: none;
+}
+
 
 div#portfoliogrid {
     display: grid;
@@ -476,7 +521,7 @@ div#mobile-menu {
     align-items: center;
     justify-content: center;
     display: grid;
-    grid-template-rows: 4rem 1fr 6rem 6rem 8rem;
+    grid-template-rows: 0rem 1fr 6rem 6rem 8rem;
     grid-template-columns: 1fr;
     grid-template-areas:
     "."
@@ -522,8 +567,8 @@ div#mobile-menu ul {
 div#mobile-menu ul li {
 
 	list-style: none;
-    background: var(--color-peach-light);
-    border: 2px solid var(--color-blue-dark);
+    /* background: var(--color-peach-light); */
+    border: 4px dashed var(--color-green-light);
 
     /* border: 2px solid var(--color-index); */
     text-align: center;
@@ -553,7 +598,7 @@ div#mobile-menu ul li a {
 }
 
 .mobile-nav--close {
-    top: 20px;
+    top: 15px;
     position: fixed;
     right: 15px;
     height: 32px;
@@ -564,7 +609,7 @@ div#mobile-menu ul li a {
 }
 
 .mobile-nav--open {
-    top: 20px;
+    top: 15px;
     position: fixed;
     right: 15px;
     height: 32px;
@@ -731,6 +776,20 @@ a#mobilemenulogo img{
     section#content {
         padding: 0;
     }
+
+    footer.article-post-info {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "author date"
+            "tags category";
+        /* margin: 0 3rem; */
+    }
+    
+    footer.article-post-info .category {
+        text-align: right;
+    }
+
 }
 
 /* really big screens get more width in the nav area */
@@ -760,12 +819,15 @@ article.wordz {
 }
 
 a.wordz:nth-child(even) article {
-    border-left: 2px solid var(--color-green-medium);
-    border-bottom: 2px solid var(--color-green-medium);
+    /* background: var(--color-blue-light); */
+    /* border-left: 2px solid var(--color-green-medium); */
+    border: 4px dashed var(--color-green-light);
+    /* border-bottom: 4px dashed var(--color-green-light); */
 }
 a.wordz:nth-child(odd) article {
-    border-left: 2px solid var(--color-blue-dark);
-    border-bottom: 2px solid var(--color-blue-dark);
+    /* background: var(--color-green-light); */
+    border: 4px dashed var(--color-blue-light);
+    /* border-bottom: 2px solid var(--color-blue-dark); */
 }
 
 a.wordz {
