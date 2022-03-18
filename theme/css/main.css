@@ -817,6 +817,10 @@ a#mobilemenulogo img{
         text-align: right;
     }
 
+    div.kofi-button {
+        min-width: 20rem;
+    }
+    
 }
 
 /* really big screens get more width in the nav area */
@@ -925,10 +929,20 @@ a.kofi-link {
     color: var(--color-blue-dark);
 }
 
+div.kofi-button {
+    background-color: var(--color-kofi-red);
+    padding: 2rem;
+    margin: 0 auto;
+}
+
 img.kofi-button {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
     margin: 0 auto;
     grid-area: "button";
     display: block;
+    max-width: 10rem;
 }
 
 @keyframes kofitext {
