@@ -26,6 +26,11 @@
     --color-blue-light: #99a0ba;
     --color-blue-medium: #4d587a;
     --color-blue-dark: #20283d;
+    --color-kofi-yellow: #FBAA19;
+    --color-kofi-red: #FF5E5B;
+    --color-kofi-blue: #13C3FF;
+    --color-kofi-gray: #434B57;
+
     /* https://lospec.com/palette-list/en4 */
 }
 
@@ -890,11 +895,15 @@ span.copyright {
     color: var(--color-peach-medium);
     /* margin: 1rem 0; */
 }
+a.kofi-link {
+    text-decoration: none !important;
+}
 
 .kofi-promo {
+    border: 4px dashed var(--color-kofi-yellow);
     margin: 1rem auto;
     padding: 1rem 2rem;
-    /* background-color: ; */
+    /* background-color: var(--color-kofi-blue); */
     /* border-top: 4px solid #FF5E5B; */
     /* border-bottom: 4px solid #FF5E5B; */
     display: grid;
@@ -904,19 +913,32 @@ span.copyright {
     grid-template-areas:
     "maincontent"
     "button";
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+}
+
+.kofi-promo:hover {
+    border: 4px dashed var(--color-kofi-red);
+    background-color: var(--color-kofi-yellow);
+    color: var(--color-blue-dark);
 }
 
 img.kofi-button {
     margin: 0 auto;
     grid-area: "button";
+    display: block;
 }
 
 .kofi-content {
     grid-area: "maincontent";
+    margin-top: 1rem;
     font-size: 2rem;
     font-family: "Kenney Pixel", 'Share Tech Mono', 'Courier Prime', 'Courier New', sans-serif;
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: 1px;
     /* font-style: italic; */
 }
 
