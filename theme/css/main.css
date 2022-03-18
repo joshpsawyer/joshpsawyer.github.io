@@ -402,12 +402,13 @@ div#footercontent {
 
 footer.article-post-info {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas:
-        "author date"
-        "tags tags"
-        "category category";
+        "author"
+        "date"
+        "tags"
+        "category";
     grid-row-gap: 0.25rem;
     border: 4px dashed var(--color-peach-light);
     /* margin: 0 3rem; */
@@ -426,7 +427,7 @@ footer.article-post-info .category {
 
 footer.article-post-info .date {
     grid-area: date;
-    text-align: right;
+    /* text-align: right; */
 }
 
 footer.article-post-info .author {
@@ -437,6 +438,9 @@ footer.article-post-info a {
     text-decoration: none;
 }
 
+section#portfolio-content {
+    padding: 0 0.5rem;
+}
 
 div#portfoliogrid {
     display: grid;
@@ -444,6 +448,8 @@ div#portfoliogrid {
     /* grid-row-gap: 0.25rem;
     grid-column-gap: 0.25rem; */
     position: static;
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.5rem;
 }
 
 div.portfolioentry {
@@ -455,6 +461,14 @@ div.portfolioentry {
     transition-duration: 300ms;
     transition-delay: 0s;
     overflow: hidden;
+}
+
+div.portfolioentry:nth-child(even) {
+    border: 4px outset var(--color-green-light);
+}
+
+div.portfolioentry:nth-child(odd) {
+    border: 4px outset var(--color-green-light);
 }
 
 .portfolioentry a img {
@@ -769,6 +783,10 @@ a#mobilemenulogo img{
         align-self: center;
     }
 
+    section#portfolio-content {
+        padding: 0rem;
+    }
+
     main#content {
         padding: 0;
     }
@@ -787,6 +805,10 @@ a#mobilemenulogo img{
     }
     
     footer.article-post-info .category {
+        text-align: right;
+    }
+
+    footer.article-post-info .date {
         text-align: right;
     }
 
