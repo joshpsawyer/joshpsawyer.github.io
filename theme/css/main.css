@@ -931,6 +931,20 @@ img.kofi-button {
     display: block;
 }
 
+@keyframes kofitext {
+    0% { top: -2px; left: 0px; }
+    25% { top: 0px; left: 2px; }
+    50% { top: 2px; left: 0px; }
+    75% { top: 0px; left: -2px; }
+    100% { top: -2px; left: 0px; }
+  }
+
+.kofi-promo:hover .kofi-content {
+    animation: kofitext 1s linear;
+    animation-iteration-count: infinite;
+
+}
+
 .kofi-content {
     grid-area: "maincontent";
     margin-top: 1rem;
@@ -939,7 +953,10 @@ img.kofi-button {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
+    position:relative;
     /* font-style: italic; */
+    top: -2px;
+    left: 0px;
 }
 
 blockquote.twitter-tweet {
