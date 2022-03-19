@@ -78,7 +78,8 @@ h1.categorytitle {
 }
 
 hr {
-    border-bottom: 2px solid var(--color-green-medium);
+    border: none;
+    border-bottom: 2px solid var(--color-peach-light);
     width: 50%;
 }
 
@@ -223,8 +224,8 @@ header#banner {
     grid-template-columns: 1fr;
     grid-template-areas:
         "headercontent";
-    border-bottom: 16px solid transparent;
-    border-image: url("../images/topspike.png") 16 round;
+    border-bottom: 1px solid var(--color-green-medium);;
+    // border-image: url("../images/topspike.png") 16 round;
 }
 
 div#hey {
@@ -368,6 +369,7 @@ section#content {
 }
 div#maincontent {
     grid-area: maincontent;
+    padding: 0.5rem 0;
 }
 
 #colophon {
@@ -393,8 +395,10 @@ footer#contentinfo {
     grid-template-areas:
         ". footercontent. "
         ". footercontent. ";
-    border-top: 16px solid transparent;
-    border-image: url("../images/bottomspike.png") 16 round;
+    // border-top: 16px solid transparent;
+    // border-top: 4px dashed var(--color-off-white);
+    border-top: 1px solid var(--color-green-medium);
+    // border-image: url("../images/bottomspike.png") 16 round;
 }
 
 div#footercontent {
@@ -444,7 +448,7 @@ footer.article-post-info a {
 }
 
 section#portfolio-content {
-    padding: 0 0.5rem;
+    padding: 0.5rem;
 }
 
 div#portfoliogrid {
@@ -789,7 +793,7 @@ a#mobilemenulogo img{
     }
 
     section#portfolio-content {
-        padding: 0rem;
+        padding: 0.5rem 0rem;
     }
 
     main#content {
@@ -933,16 +937,24 @@ div.kofi-button {
     background-color: var(--color-kofi-red);
     padding: 2rem;
     margin: 0 auto;
+    font-family: "Kenney Pixel", 'Share Tech Mono', 'Courier Prime', 'Courier New', sans-serif;
+    line-height: 3rem;
+    vertical-align: middle;
+    font-size: 3rem;
+    color: #000000;
+    border: 4px dashed #000000;
 }
 
 img.kofi-button {
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
-    margin: 0 auto;
+    margin: 0 0.25rem 0 0;
     grid-area: "button";
-    display: block;
-    max-width: 10rem;
+    display: inline;
+    max-width: 4rem;
+    vertical-align: middle;
+
 }
 
 @keyframes kofitext {
@@ -973,9 +985,31 @@ img.kofi-button {
     left: 0px;
 }
 
+@keyframes kofijoinletter {
+    0% { top: -2px; left: 0px; }
+    50% { top: 2px; left: 0px; }
+    100% { top: -2px; left: 0px; }
+}
+
+@mixin letter-animate {
+    @for $i from 1 through 17 {
+      &:nth-child(#{$i}) {
+        animation: kofijoinletter 1s linear;
+        animation-iteration-count: infinite;
+        animation-delay: #{$i * .1}s;
+        // transition: all .2s #{$i * .1}s ease-in;
+      }
+    }
+}
+
+.kofi-promo:hover span.kofijoin span {
+    @include letter-animate;
+    position: relative;
+}
+
 blockquote.twitter-tweet {
     /* background-color: #f2f0e5; */
-    border-left: 2px solid #68c2d3;
+    border-left: 4px dashed #68c2d3;
     padding: 1rem 2rem;
     font-style: normal;
     margin: 0;
