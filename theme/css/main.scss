@@ -60,7 +60,7 @@ h6 {font-size: 1em}		/* 14px */
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
 	line-height: 1.1;
-	margin-bottom: .8em;
+	// margin-bottom: .8em;
     font-family: "Kenney Pixel", 'Share Tech Mono', 'Courier Prime', 'Courier New', sans-serif;
 }
 
@@ -81,6 +81,28 @@ hr {
     border: none;
     border-bottom: 2px solid var(--color-peach-light);
     width: 50%;
+}
+
+address {
+    display: inline;
+}
+
+.byline {
+    font-family: "Kenney Pixel", 'Share Tech Mono', 'Courier Prime', 'Courier New', sans-serif;
+    color: var(--color-peach-light);
+    font-size: 1.5rem;
+    margin: 0.25rem 0;
+    border-bottom: 4px dashed var(--color-green-light);
+    padding-bottom: 1rem;
+}
+
+.byline a {
+    &:link {
+        color: var(--color-peach-light);
+    }
+    &:visited {
+        color: var(--color-peach-light);
+    }
 }
 
 /* Anchors */
@@ -806,11 +828,10 @@ a#mobilemenulogo img{
     }
 
     footer.article-post-info {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto;
         grid-template-areas:
-            "author date"
-            "tags category";
+            "tags";
         /* margin: 0 3rem; */
     }
     
@@ -884,8 +905,8 @@ article.wordz h2 {
 }
 
 section#content h1:first-child {
-    color: var(--color-peach-light);
-    font-size: 1.5rem;
+    color: var(--color-green-light);
+    font-size: 2rem;
 }
 
 /* div#signatureblock {
