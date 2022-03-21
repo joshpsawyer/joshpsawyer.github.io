@@ -1052,40 +1052,42 @@ img.bannerbutton {
     font-size: 1.5rem;
     padding: 15px; /* creates some space around the widget */
     font-family: "Kenney Pixel", 'Share Tech Mono', 'Courier Prime', 'Courier New', sans-serif;
-  }
   
-  #donaldsonwebring .webring-prev {
-    text-align:right;
-  }
-  
-  #donaldsonwebring .webring-info {
-     text-align:center;
-  }
-  
-  #donaldsonwebring .webring-next {
-    text-align:left;
-  }
-  
+    .webring-prev {
+        text-align:right;
+    }
+    
+    .webring-info {
+        text-align:center;
+    }
+    
+    .webring-next {
+        text-align:left;
+    }
+    
+    .webring {
+        display: grid;
+        grid-column-gap: 0.25rem;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 
-#donaldsonwebring .webring {
-    display: grid;
-    grid-column-gap: 0.25rem;
-    grid-template-columns: 1fr 1fr 1fr;
-}
+    div {
+        display: block;
+    }
 
-#donaldsonwebring div {
-    display: block;
-}
+    .webring a {
+        &:link, &:visited {
+            padding: 2px 4px;
+            text-decoration: none;
+            color: var(--color-green-medium);
+        }
 
-#donaldsonwebring .webring a {
-    padding: 2px 4px;
-    text-decoration: none;
-    color: var(--color-green-medium);
-}
-
-#donaldsonwebring .webring a:hover {
-    color: var(--color-peach-light);
-    background: var(--color-green-medium);
+        &:hover {
+            color: var(--color-peach-light);
+            background: var(--color-green-medium);
+        }
+        
+    }
 }
 
 /* nav#menu ul li.active a, nav#menu ul li.active a:visited {
