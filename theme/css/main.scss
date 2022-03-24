@@ -233,11 +233,15 @@ html {
 div.container {
     height: 100vh;
     display: grid;
-    grid-template-rows: 72px 1fr;
+    grid-template-rows: 72px 1fr auto auto;
+    overflow-x: auto;
+    overflow-y: scroll;
     grid-template-columns: 1fr;
     grid-template-areas:
     "header"
-    "maincontent"
+    "content"
+    "colophon"
+    "footer";
 }
 
 header#banner {
@@ -251,30 +255,14 @@ header#banner {
     border-image: url("../images/postage_stamp_peach.png") 16 round;
 }
 
-div#hey {
-    overflow-x: auto;
-    overflow-y: scroll;
-    grid-area:maincontent;
-    z-index: 10;
-    display: grid;
-    grid-template-rows: 1fr auto auto;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-    "content"
-    "colophon"
-    "footer";
-}
-
 div#headercontent {
     background-color: var(--color-peach-light);
     grid-area: headercontent;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 47px 1fr 47px ;
+    grid-template-rows: 1fr;
     grid-template-areas: 
-        "headerlogo"
-        "headerlogo"
-        "headerlogo";
+        ". headerlogo menu";
     /* border-bottom: 4px dashed var(--color-off-white); */
 }
 
@@ -414,10 +402,10 @@ footer#contentinfo {
     /* border-top: 4px dashed var(--color-off-white); */
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    // grid-template-rows: 1fr 1fr;
     grid-template-areas:
-        "footercontent"
         "footercontent";
+        // "footercontent";
     border-top: 16px solid transparent;
     // border-top: 4px dashed var(--color-off-white);
     // border-top: 1px solid var(--color-green-medium);
@@ -426,8 +414,9 @@ footer#contentinfo {
 
 div#footercontent {
     grid-area: footercontent;
-    margin: 0 auto;
+    margin: 0 auto 0.25rem auto;
     align-self: center;
+    justify-self: center;
 }
 
 footer.article-post-info {
@@ -469,7 +458,7 @@ footer.article-post-info a {
 }
 
 section#portfolio-content {
-    padding: 0.5rem;
+    padding: 0 0.5rem;
 }
 
 div#portfoliogrid {
@@ -478,8 +467,8 @@ div#portfoliogrid {
     /* grid-row-gap: 0.25rem;
     grid-column-gap: 0.25rem; */
     position: static;
-    grid-column-gap: 0.5rem;
-    grid-row-gap: 0.5rem;
+    grid-column-gap: 0.75rem;
+    grid-row-gap: 0.75rem;
 }
 
 div.portfolioentry {
@@ -491,16 +480,38 @@ div.portfolioentry {
     transition-duration: 300ms;
     transition-delay: 0s;
     overflow: hidden;
+    max-height: 16rem;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // overflow: hidden;
+    margin: 8px;
 
     &:nth-child(even) {
-        border: 4px outset var(--color-green-light);
+        outline: 4px dashed var(--color-blue-light);
+        outline-offset: 4px;
+
+        // border: 16px outset var(--color-green-light);
+        // border-image: url("../images/postage_stamp_green.png") 16 round;
+        // background-color: var(--color-peach-light);
     }
     
     &:nth-child(odd) {
-        border: 4px outset var(--color-green-light);
+        outline: 4px dashed var(--color-blue-light);
+        outline-offset: 4px;
+        // border: 16px outset var(--color-blue-light);
+        // border-image: url("../images/postage_stamp_green.png") 16 round;
+    }
+
+    &:nth-child(3n+1) {
+        grid-column: span 4;
     }
 
     a img {
+        object-fit: cover;
+            flex-shrink: 0;
+            min-width: 100%;
+            min-height: 100%;
         display: block;
     }
 }
@@ -627,9 +638,10 @@ div#mobile-menu ul {
 }
 
 .mobile-nav--open {
+    grid-area: menu;
     top: 15px;
-    position: fixed;
-    right: 15px;
+    position: relative;
+    // right: 15px;
     height: 32px;
     width: 32px;
     display: block;
@@ -706,6 +718,48 @@ a#mobilemenulogo {
     }
 }
 
+aside {
+    // outline: 4px dashed var(--color-green-light);
+    // outline-offset: 4px;
+    // background-color: var(--color-peach-light);
+
+    // margin: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    // grid-template-areas:
+    line-height: 2rem;
+    padding: 1rem;
+    font-family: "TT Norms";
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-style: italic;
+
+    &.right {
+        border-top: 4px dashed var(--color-blue-light);
+        border-bottom: 4px dashed var(--color-blue-light);
+        position: relative;
+    }
+
+    &.left {
+        border-top: 4px dashed var(--color-blue-light);
+        border-bottom: 4px dashed var(--color-blue-light);
+        position: relative;
+    }
+
+    p {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        &:first-child {
+            margin-top: 0rem;
+        }
+
+        &:last-child {
+            margin-bottom: 0rem;
+        }
+    }
+}
+
 @media all and (min-width: 37rem) {
     div#portfoliogrid {
         grid-template-columns: repeat(6, 1fr);
@@ -716,6 +770,32 @@ a#mobilemenulogo {
 
 /* above 50 rem, we ditch the mobile menu  */
 @media all and (min-width: 52rem) {
+    aside {
+        width: 40%;
+    
+        &.right {
+            border: 0;
+            border-left: 4px dashed var(--color-blue-light);
+            // transform: rotate(1deg);
+            float: right;
+            position: relative;
+            margin-left: 4%;
+            margin-right: -10%;
+            // left: 2rem;
+        }
+    
+        &.left {
+            border: 0;
+            border-right: 4px dashed var(--color-blue-light);
+            // transform: rotate(-1deg);
+            float: left;
+            position: relative;
+            margin-right: 4%;
+            margin-left: -10%;
+            // right: 2rem;
+        }
+    }
+
     /* add the columns on either side to prevent the website from stretching too wide */
     header#banner {
         grid-template-columns: 1fr;
@@ -729,7 +809,7 @@ a#mobilemenulogo {
 
     footer#contentinfo {
         grid-template-columns: 1fr var(--site-max-width) 1fr;
-        /* grid-template-areas: ". footercontent . ";     */
+        grid-template-areas: ". footercontent . ";
     }
     
     /* hide the mobile nav, show the non-mobile nav */
@@ -761,7 +841,7 @@ a#mobilemenulogo {
     }
 
     section#portfolio-content {
-        padding: 0.5rem 0rem;
+        // padding: 0.5rem 0rem;
     }
 
     main#content {
