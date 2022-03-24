@@ -64,6 +64,24 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Kenney Pixel", 'Share Tech Mono', 'Courier Prime', 'Courier New', sans-serif;
 }
 
+@mixin kenney-pixel {
+    font-family: "Kenney Pixel", 'Share Tech Mono', 'Courier Prime', 'Courier New', sans-serif;
+}
+
+@mixin kenney-pixel-1p5x {
+    @include kenney-pixel;
+
+    font-size: 1.5rem;
+}
+
+
+@mixin kenney-pixel-2x {
+    @include kenney-pixel;
+
+    font-size: 2rem;
+}
+
+
 span.kenneypixel {
     font-family: "Kenney Pixel", 'Share Tech Mono', 'Courier Prime', 'Courier New', sans-serif;
     font-size: 1.5em;
@@ -765,6 +783,23 @@ aside {
         grid-template-columns: repeat(6, 1fr);
         /* grid-row-gap: 0.5rem; */
         /* grid-column-gap: 0.5rem; */
+    }
+}
+
+.gametitle {
+    @include kenney-pixel-1p5x;
+    letter-spacing: 1px;
+
+    &:nth-child(3n+1) {
+        color: var(--color-kofi-red);
+    }
+
+    &:nth-child(3n+2) {
+        color: var(--color-kofi-yellow);
+    }
+
+    &:nth-child(3n+3) {
+        color: var(--color-kofi-blue);
     }
 }
 
