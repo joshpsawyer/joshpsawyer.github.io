@@ -786,8 +786,33 @@ aside {
     }
 }
 
+@keyframes gametitle {
+    0% { top: 0px; left: 0px; }
+    10% { top: -2px; left: 0px; }
+    20% { top: 0px; left: 0px; }
+}
+
+@mixin letter-animate2 {
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}n+1) {
+        animation: gametitle 1s linear;
+        animation-iteration-count: infinite;
+        animation-delay: #{$i * .1}s;
+        // transition: all .2s #{$i * .1}s ease-in;
+      }
+    }
+}
+
+
 .gametitle {
+    position: relative;
     @include kenney-pixel-1p5x;
+    span {
+        position: relative;
+
+        @include letter-animate2;
+    }
+
     letter-spacing: 1px;
 
     &:nth-child(3n+1) {
@@ -801,6 +826,7 @@ aside {
     &:nth-child(3n+3) {
         color: var(--color-kofi-blue);
     }
+
 }
 
 /* above 50 rem, we ditch the mobile menu  */
@@ -1062,8 +1088,8 @@ img.kofi-button {
 }
 
 @mixin letter-animate {
-    @for $i from 1 through 17 {
-      &:nth-child(#{$i}) {
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}n+1) {
         animation: kofijoinletter 1s linear;
         animation-iteration-count: infinite;
         animation-delay: #{$i * .1}s;
