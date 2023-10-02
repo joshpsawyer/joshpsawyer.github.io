@@ -30,6 +30,7 @@
     --color-kofi-red: #FF5E5B;
     --color-kofi-blue: #13C3FF;
     --color-kofi-gray: #434B57;
+    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
     /* https://lospec.com/palette-list/en4 */
 }
@@ -41,7 +42,7 @@ body {
     color: var(--color-blue-dark);
     background: var(--color-off-white);
     /* font-size: 87.5%; Base font size: 14px; */
-    font-family: 'TT Norms', sans-serif;
+    font-family: var(--system-ui);
     line-height: 1.5em;
     margin: 0;
     padding: 0;
@@ -747,7 +748,7 @@ aside {
     // grid-template-areas:
     line-height: 2rem;
     padding: 1rem;
-    font-family: "TT Norms";
+    font-family: var(--system-ui);
     font-size: 1.5rem;
     text-transform: uppercase;
     font-style: italic;
